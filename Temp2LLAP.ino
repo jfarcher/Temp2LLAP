@@ -50,7 +50,7 @@ void printTemperature(DeviceAddress deviceAddress)
         float tempC = sensors.getTempC(deviceAddress);
         LLAP.sendInt("TEMP",tempC);    
 }  
-void loop() {
+void loop() {f
   
 
 
