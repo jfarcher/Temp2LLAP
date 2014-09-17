@@ -38,6 +38,7 @@ void setup() {
 //---------------------------------------------------------------------------------
 
         LLAP.init(DEVICEID);
+       	LLAP.sendMessage(F("STARTED"));
         sensors.begin();
         if (!sensors.getAddress(insideThermometer, 0)) Serial.println("Unable to find address for Device 0"); 
         sensors.setResolution(insideThermometer, 12);
@@ -50,7 +51,7 @@ void printTemperature(DeviceAddress deviceAddress)
         float tempC = sensors.getTempC(deviceAddress);
         LLAP.sendInt("TEMP",tempC);    
 }  
-void loop() {f
+void loop() {
   
 
 
